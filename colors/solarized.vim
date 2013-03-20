@@ -1090,6 +1090,13 @@ endfunction
 autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarized | else | call SolarizedMenu() | endif
 
 "}}}
+" Git Gutter {{{
+  exe "hi! GitGutterAdd"           .s:fmt_none   .s:fg_green  .s:bg_base02 .s:sp_green
+  exe "hi! GitGutterChange"        .s:fmt_none   .s:fg_yellow .s:bg_base02 .s:sp_yellow
+  exe "hi! GitGutterDelete"        .s:fmt_none   .s:fg_red    .s:bg_base02
+  exe "hi! GitGutterChangeDelete"  .s:fmt_none   .s:fg_blue   .s:bg_base02 .s:sp_blue
+  " ^ a changed line followed by at least one removed line
+"}}}
 " License "{{{
 " ---------------------------------------------------------------------
 "
